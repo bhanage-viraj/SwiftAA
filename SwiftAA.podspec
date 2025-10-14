@@ -20,8 +20,8 @@ to become the most reliable source of astronomical computations.
   s.social_media_url   = "https://twitter.com/onekiloparsec"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "12.0"
-  s.osx.deployment_target = "10.13"
+  s.ios.deployment_target = "13.0"
+  s.osx.deployment_target = "10.15"
   s.watchos.deployment_target = "7.0"
   s.tvos.deployment_target = "12.0"
 

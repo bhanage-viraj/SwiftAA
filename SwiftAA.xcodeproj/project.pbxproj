@@ -1446,7 +1446,7 @@
 				50CEF2E52A1BF27D00367373 /* stdafx.h */,
 			);
 			name = "AA+";
-			path = "Sources/aaplus-v2.50";
+			path = "Sources/AA+";
 			sourceTree = "<group>";
 		};
 		9F694D881D15C65D00EE7492 /* Auxiliary */ = {

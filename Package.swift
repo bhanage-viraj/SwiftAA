@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftAA",
-    platforms: [.macOS(.v10_13), .iOS(.v12)],
+    platforms: [.macOS(.v10_15), .iOS(.v13)],
     products: [
         // The AAplus product is the C++ project this one wraps. 
         .library(name: "AAplus", targets: ["AAplus"]),

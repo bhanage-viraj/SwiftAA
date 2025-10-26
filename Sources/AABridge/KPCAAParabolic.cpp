@@ -42,7 +42,7 @@ KPCAAParabolicObjectDetails KPCAAParabolic_CalculateDetails(double JD, struct KP
     details.TrueGeocentricDeclination = detailsPlus.TrueGeocentricDeclination;
     details.TrueGeocentricDistance = detailsPlus.TrueGeocentricDistance;
     details.TrueGeocentricLightTime = detailsPlus.TrueGeocentricLightTime;
-    details.AstrometricGeocentricRA = detailsPlus.AstrometricGeocenticRA;
+    details.AstrometricGeocentricRA = detailsPlus.AstrometricGeocentricRA;
     details.AstrometricGeocentricDeclination = detailsPlus.AstrometricGeocentricDeclination;
     details.AstrometricGeocentricDistance = detailsPlus.AstrometricGeocentricDistance;
     details.AstrometricGeocentricLightTime = detailsPlus.AstrometricGeocentricLightTime;

@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://twitter.com/onekiloparsec"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "12.0"
-  s.osx.deployment_target = "10.13"
+  s.ios.deployment_target = "13.0"
+  s.osx.deployment_target = "10.15"
   s.watchos.deployment_target = "7.0"
   s.tvos.deployment_target = "12.0"
 
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
   s.swift_version = "5"
 
   s.name          = "AABridge"
-  s.source_files  = "Sources/AABridge", "Sources/AABridge/**/*.{h,cpp}", "Sources/aaplus-v2.50", "Sources/aaplus-v2.50/**/*.{h,cpp}"
+  s.source_files  = "Sources/AABridge", "Sources/AABridge/**/*.{h,cpp}", "Sources/AA+", "Sources/AA+/**/*.{h,cpp}"
   s.public_header_files = "Sources/AABridge/include/*.h"
-  s.exclude_files = "Sources/aaplus-v2.50/AATest.cpp", "Sources/aaplus-v2.50/include/AAVSOP2013.h", "Sources/aaplus-v2.50/AAVSOP2013.cpp"
+  s.exclude_files = "Sources/AA+/AATest.cpp", "Sources/AA+/include/AAVSOP2013.h", "Sources/AA+/AAVSOP2013.cpp"
   
   s.library = 'c++'
   s.xcconfig = {

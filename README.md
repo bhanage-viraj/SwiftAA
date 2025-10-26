@@ -57,7 +57,7 @@ Installation
 
 Using the [Swift Package Manager](https://swift.org/package-manager/): either through Xcode > File > Swift Packages > Add Package Dependency... and enter this repo URL (including the `.git` extension), , then choose `SwiftAA` target. Or add the line  `.package(url: "https://github.com/onekiloparsec/SwiftAA.git", from: "3.0.0")` in the `dependencies` section of your `Package.swift` file.
 
-Using [Carthage](https://github.com/Carthage/Carthage): add `github "onekiloparsec/SwiftAA"` to your `Cartfile`, then run `carthage update`, and finally add the newly built `SwiftAA-macOS.framework` or `SwiftAA-iOS.framework` into your project (in `embedded binaries`).
+~~Using [Carthage](https://github.com/Carthage/Carthage): add `github "onekiloparsec/SwiftAA"` to your `Cartfile`, then run `carthage update`, and finally add the newly built `SwiftAA-macOS.framework` or `SwiftAA-iOS.framework` into your project (in `embedded binaries`).~~
 
 Using [CocoaPods](http://cocoapods.org/): add `pod 'SwiftAA'` to your `Podfile` and then run `pod update`. 
 

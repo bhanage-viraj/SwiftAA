@@ -1,29 +1,69 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "SwiftAA",
-    platforms: [.macOS(.v10_15), .iOS(.v13)],
+    defaultLocalization: "en",
+    platforms: [
+        .macOS(.v10_15),
+        .iOS(.v13),
+        .tvOS(.v12),
+        .watchOS(.v7)
+    ],
     products: [
-        // The AAplus product is the C++ project this one wraps. 
+        // The C++ astronomical algorithms library by J.P. Naughter
         .library(name: "AAplus", targets: ["AAplus"]),
-        // The AABridge product provides C (not Objective-C) bindings for AAplus for Swift to use.
+        // The C bridge exposing AAplus functions to Swift
         .library(name: "AABridge", targets: ["AABridge"]),
-        // …and finally, SwiftAA provides the Swift interface.
+        // The Swift wrapper API on top of the bridge
         .library(name: "SwiftAA", targets: ["SwiftAA"])
     ],
     targets: [
+        // MARK: - C++ Core
         .target(
-            name: "AAplus", path: "Sources/AA+",
-            exclude: ["naughter.css", "CMakeLists.txt", "AA+.htm", "AAVSOP2013.h", "AA+.h", "AAVSOP2013.cpp", "AATest.cpp"],
-            publicHeadersPath: ""
+            name: "AAplus",
+            path: "Sources/AA+",
+            exclude: [
+                "naughter.css",
+                "CMakeLists.txt",
+                "AA+.htm",
+                "AAVSOP2013.h",
+                "AAVSOP2013.cpp",
+                "AATest.cpp"
+            ],
+            publicHeadersPath: ".",
+            cxxSettings: [
+                .headerSearchPath("."),
+                .unsafeFlags(["-std=c++17"])
+            ]
         ),
-        .target(name: "AABridge", dependencies: ["AAplus"]),
-        .testTarget(  name: "AABridgeTests", dependencies: ["AABridge"]),
-        .target(name: "SwiftAA", dependencies: ["AABridge"], exclude: ["SwiftAA-Info.plist"]),
-        .testTarget(name: "SwiftAATests", dependencies: ["SwiftAA"], exclude: ["SwiftAATests-Info.plist"])
+
+        // MARK: - C Bridge
+        .target(
+            name: "AABridge",
+            dependencies: ["AAplus"],
+            path: "Sources/AABridge",
+            publicHeadersPath: "include",
+            cxxSettings: [.unsafeFlags(["-std=c++17"])]
+        ),
+        .testTarget(
+            name: "AABridgeTests",
+            dependencies: ["AABridge"]
+        ),
+
+        // MARK: - Swift API
+        .target(
+            name: "SwiftAA",
+            dependencies: ["AABridge"],
+            path: "Sources/SwiftAA",
+            exclude: ["SwiftAA-Info.plist"]
+        ),
+        .testTarget(
+            name: "SwiftAATests",
+            dependencies: ["SwiftAA"],
+            path: "Tests/SwiftAATests",
+            exclude: ["SwiftAATests-Info.plist"]
+        )
     ],
-    cxxLanguageStandard: .gnucxx17
+    cxxLanguageStandard: .cxx17
 )

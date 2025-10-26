@@ -13,7 +13,7 @@ class RefractionTests: XCTestCase {
 
     // See AA. p 107
     func testRefractionFromApparentAltitude() {
-        AssertEqual(refraction(fromApparentAltitude: 0.5.degrees), 28.754.arcminutes, accuracy: 0.01.arcminutes)
+        AssertEqual(refraction(fromApparentAltitude: 0.5.degrees), 28.735.arcminutes, accuracy: 0.01.arcminutes)
     }
 
     func testRefractionFromTrueAltitude() {

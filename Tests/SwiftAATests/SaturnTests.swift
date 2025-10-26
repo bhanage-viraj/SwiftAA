@@ -34,14 +34,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Mimas.inShadowTransit, false)
         
         let mimasApparentCoords = saturn.Mimas.rectangularCoordinates()
-        XCTAssertEqual(mimasApparentCoords.X, 3.1016926066713597)
-        XCTAssertEqual(mimasApparentCoords.Y, -0.20395048965085766)
-        XCTAssertEqual(mimasApparentCoords.Z, 0.29545514689493052)
+        XCTAssertEqual(mimasApparentCoords.X, 3.101692606671, accuracy: 1e-12)
+        XCTAssertEqual(mimasApparentCoords.Y, -0.203950489650, accuracy: 1e-12)
+        XCTAssertEqual(mimasApparentCoords.Z, 0.295455146894, accuracy: 1e-12)
 
         let mimasTrueCoords = saturn.Mimas.rectangularCoordinates(false)
-        XCTAssertEqual(mimasTrueCoords.X, 3.1017342525489839)
-        XCTAssertEqual(mimasTrueCoords.Y, -0.20395333469600962)
-        XCTAssertEqual(mimasTrueCoords.Z, 0.29545514689493052)
+        XCTAssertEqual(mimasTrueCoords.X, 3.101734252548, accuracy: 1e-12)
+        XCTAssertEqual(mimasTrueCoords.Y, -0.203953334696, accuracy: 1e-12)
+        XCTAssertEqual(mimasTrueCoords.Z, 0.295455146894, accuracy: 1e-12)
 
         // ------------ Enceladus (II)
         
@@ -51,14 +51,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Enceladus.inTransit, false)
         
         let enceladusApparentCoords = saturn.Enceladus.rectangularCoordinates()
-        XCTAssertEqual(enceladusApparentCoords.X, 3.8233720819374231)
-        XCTAssertEqual(enceladusApparentCoords.Y, 0.3181181493094038)
-        XCTAssertEqual(enceladusApparentCoords.Z,  -0.8325520387386528)
+        XCTAssertEqual(enceladusApparentCoords.X, 3.823372081937, accuracy: 1e-12)
+        XCTAssertEqual(enceladusApparentCoords.Y, 0.318118149309, accuracy: 1e-12)
+        XCTAssertEqual(enceladusApparentCoords.Z,  -0.832552038738, accuracy: 1e-12)
         
         let enceladusTrueCoords = saturn.Enceladus.rectangularCoordinates(false)
-        XCTAssertEqual(enceladusTrueCoords.X, 3.8232138214693565)
-        XCTAssertEqual(enceladusTrueCoords.Y, 0.3181056446263969)
-        XCTAssertEqual(enceladusTrueCoords.Z, -0.8325520387386528)
+        XCTAssertEqual(enceladusTrueCoords.X, 3.823213821469, accuracy: 1e-12)
+        XCTAssertEqual(enceladusTrueCoords.Y, 0.318105644626, accuracy: 1e-12)
+        XCTAssertEqual(enceladusTrueCoords.Z, -0.832552038738, accuracy: 1e-12)
 
         // ------------ Tethys (III)
         
@@ -68,14 +68,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Tethys.inTransit, false)
 
         let tethysApparentCoords = saturn.Tethys.rectangularCoordinates()
-        XCTAssertEqual(tethysApparentCoords.X, 4.0271372473723845)
-        XCTAssertEqual(tethysApparentCoords.Y, -1.0612064201626388)
-        XCTAssertEqual(tethysApparentCoords.Z, 2.5448808969764265)
+        XCTAssertEqual(tethysApparentCoords.X, 4.027137247372, accuracy: 1e-12)
+        XCTAssertEqual(tethysApparentCoords.Y, -1.061206420162, accuracy: 1e-12)
+        XCTAssertEqual(tethysApparentCoords.Z, 2.544880896976, accuracy: 1e-12)
         
         let tethysTrueCoords = saturn.Tethys.rectangularCoordinates(false)
-        XCTAssertEqual(tethysTrueCoords.X, 4.0275666335179263)
-        XCTAssertEqual(tethysTrueCoords.Y, -1.0613339289693595)
-        XCTAssertEqual(tethysTrueCoords.Z, 2.5448808969764265)
+        XCTAssertEqual(tethysTrueCoords.X, 4.027566633517, accuracy: 1e-12)
+        XCTAssertEqual(tethysTrueCoords.Y, -1.061333928969, accuracy: 1e-12)
+        XCTAssertEqual(tethysTrueCoords.Z, 2.544880896976, accuracy: 1e-12)
 
         // ------------ Dione (IV)
 
@@ -85,14 +85,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Dione.inTransit, false)
 
         let dioneApparentCoords = saturn.Dione.rectangularCoordinates()
-        XCTAssertEqual(dioneApparentCoords.X, -5.3651595734589526)
-        XCTAssertEqual(dioneApparentCoords.Y, -1.1481746511166298)
-        XCTAssertEqual(dioneApparentCoords.Z, 3.0044806721031114)
+        XCTAssertEqual(dioneApparentCoords.X, -5.365159573458, accuracy: 1e-12)
+        XCTAssertEqual(dioneApparentCoords.Y, -1.148174651116, accuracy: 1e-12)
+        XCTAssertEqual(dioneApparentCoords.Z, 3.004480672103, accuracy: 1e-12)
         
         let dioneTrueCoords = saturn.Dione.rectangularCoordinates(false)
-        XCTAssertEqual(dioneTrueCoords.X, -5.3659723472927503)
-        XCTAssertEqual(dioneTrueCoords.Y, -1.1483375245382277)
-        XCTAssertEqual(dioneTrueCoords.Z, 3.0044806721031114)
+        XCTAssertEqual(dioneTrueCoords.X, -5.365972347292, accuracy: 1e-12)
+        XCTAssertEqual(dioneTrueCoords.Y, -1.148337524538, accuracy: 1e-12)
+        XCTAssertEqual(dioneTrueCoords.Z, 3.004480672103, accuracy: 1e-12)
 
         // ------------ Rhea (V)
 
@@ -102,14 +102,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Rhea.inTransit, false)
 
         let rheaApparentCoords = saturn.Rhea.rectangularCoordinates()
-        XCTAssertEqual(rheaApparentCoords.X, -0.97184697130855512)
-        XCTAssertEqual(rheaApparentCoords.Y, -3.1360312952377654)
-        XCTAssertEqual(rheaApparentCoords.Z, 8.0800626622957648)
+        XCTAssertEqual(rheaApparentCoords.X, -0.971846971308, accuracy: 1e-12)
+        XCTAssertEqual(rheaApparentCoords.Y, -3.136031295237, accuracy: 1e-12)
+        XCTAssertEqual(rheaApparentCoords.Z, 8.0800626622957, accuracy: 1e-12)
         
         let rheaTrueCoords = saturn.Rhea.rectangularCoordinates(false)
-        XCTAssertEqual(rheaTrueCoords.X, -0.97244511110908626)
-        XCTAssertEqual(rheaTrueCoords.Y, -3.1372276719967886)
-        XCTAssertEqual(rheaTrueCoords.Z, 8.0800626622957648)
+        XCTAssertEqual(rheaTrueCoords.X, -0.972445111109, accuracy: 1e-12)
+        XCTAssertEqual(rheaTrueCoords.Y, -3.137227671996, accuracy: 1e-12)
+        XCTAssertEqual(rheaTrueCoords.Z, 8.080062662295, accuracy: 1e-12)
 
         // ------------ Titan (VI)
         
@@ -119,14 +119,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Titan.inTransit, false)
 
         let titanApparentCoords = saturn.Titan.rectangularCoordinates()
-        XCTAssertEqual(titanApparentCoords.X, 14.56773539040123)
-        XCTAssertEqual(titanApparentCoords.Y, 4.7383746459364717)
-        XCTAssertEqual(titanApparentCoords.Z, -12.754798683947845)
+        XCTAssertEqual(titanApparentCoords.X, 14.567735390428, accuracy: 1e-12)
+        XCTAssertEqual(titanApparentCoords.Y, 4.738374645925, accuracy: 1e-12)
+        XCTAssertEqual(titanApparentCoords.Z, -12.754798683918, accuracy: 1e-12)
         
         let titanTrueCoords = saturn.Titan.rectangularCoordinates(false)
-        XCTAssertEqual(titanTrueCoords.X, 14.558800712190623)
-        XCTAssertEqual(titanTrueCoords.Y, 4.7355211592204158)
-        XCTAssertEqual(titanTrueCoords.Z, -12.754798683947845)
+        XCTAssertEqual(titanTrueCoords.X, 14.558800712218, accuracy: 1e-12)
+        XCTAssertEqual(titanTrueCoords.Y, 4.735521159209, accuracy: 1e-12)
+        XCTAssertEqual(titanTrueCoords.Z, -12.754798683918, accuracy: 1e-12)
 
         // ------------ Hyperion (VII)
         
@@ -136,14 +136,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Hyperion.inTransit, false)
         
         let hyperionApparentCoords = saturn.Hyperion.rectangularCoordinates()
-        XCTAssertEqual(hyperionApparentCoords.X, -18.001151501311426)
-        XCTAssertEqual(hyperionApparentCoords.Y, -5.3281808331284966)
-        XCTAssertEqual(hyperionApparentCoords.Z, 15.120922945624717)
+        XCTAssertEqual(hyperionApparentCoords.X, -18.001151501273, accuracy: 1e-12)
+        XCTAssertEqual(hyperionApparentCoords.Y, -5.328180833140, accuracy: 1e-12)
+        XCTAssertEqual(hyperionApparentCoords.Z, 15.120922945655, accuracy: 1e-12)
         
         let hyperionTrueCoords = saturn.Hyperion.rectangularCoordinates(false)
-        XCTAssertEqual(hyperionTrueCoords.X, -18.014172683700167)
-        XCTAssertEqual(hyperionTrueCoords.Y, -5.3319847420264441)
-        XCTAssertEqual(hyperionTrueCoords.Z, 15.120922945624717)
+        XCTAssertEqual(hyperionTrueCoords.X, -18.014172683663, accuracy: 1e-12)
+        XCTAssertEqual(hyperionTrueCoords.Y, -5.331984742038, accuracy: 1e-12)
+        XCTAssertEqual(hyperionTrueCoords.Z, 15.120922945655, accuracy: 1e-12)
 
         // ------------ Iapetus (VIII)
         
@@ -153,14 +153,14 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(saturn.Iapetus.inTransit, false)
     
         let iapetusApparentCoords = saturn.Iapetus.rectangularCoordinates()
-        XCTAssertEqual(iapetusApparentCoords.X, -48.760383752635377)
-        XCTAssertEqual(iapetusApparentCoords.Y, 4.1371660689520686)
-        XCTAssertEqual(iapetusApparentCoords.Z, 32.737852943980201)
+        XCTAssertEqual(iapetusApparentCoords.X, -48.760383752651, accuracy: 1e-12)
+        XCTAssertEqual(iapetusApparentCoords.Y, 4.137166068962, accuracy: 1e-12)
+        XCTAssertEqual(iapetusApparentCoords.Z, 32.737852943956, accuracy: 1e-12)
         
         let iapetusTrueCoords = saturn.Iapetus.rectangularCoordinates(false)
-        XCTAssertEqual(iapetusTrueCoords.X, -48.835951923571479)
-        XCTAssertEqual(iapetusTrueCoords.Y, 4.1435608547046954)
-        XCTAssertEqual(iapetusTrueCoords.Z, 32.737852943980201)
+        XCTAssertEqual(iapetusTrueCoords.X, -48.835951923587, accuracy: 1e-12)
+        XCTAssertEqual(iapetusTrueCoords.Y, 4.143560854715, accuracy: 1e-12)
+        XCTAssertEqual(iapetusTrueCoords.Z, 32.737852943956, accuracy: 1e-12)
     }
     
     // See AA, p.320, Example 45.a

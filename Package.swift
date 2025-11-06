@@ -8,7 +8,8 @@ let package = Package(
         .macOS(.v10_15),
         .iOS(.v13),
         .tvOS(.v12),
-        .watchOS(.v7)
+        .watchOS(.v7),
+        .visionOS(.v1)
     ],
     products: [
         // The C++ astronomical algorithms library by J.P. Naughter
